@@ -2,7 +2,7 @@ from langchain.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain.chains import LLMChain, ReduceDocumentsChain, MapReduceDocumentsChain
 from langchain.chains.combine_documents.stuff import StuffDocumentsChain
-from langchain_community import TextLoader
+from langchain.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.docstore.document import Document
 
@@ -32,7 +32,7 @@ def tokenizer(text):
     
     return split_docs
 
-def langchain(text="책원문", interesting="재미있던 부분", impression="느낀점"):
+def langchain_model(text="책원문", interesting="재미있던 부분", impression="느낀점"):
 
     '''
     - 요약/ 독후감 langchain model
