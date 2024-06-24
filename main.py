@@ -5,7 +5,7 @@
 '''
 import streamlit as st
 
-from model import langchain
+from model import langchain_model
 
 # 1. markdown 스타일 지정
 st.markdown(
@@ -56,7 +56,7 @@ def main():
             
             # 첫 번째 컬럼: 독후감 결과
             with st.spinner("독후감 및 요약문이 작성 중입니다... 원문 내용에 따라 최대 1~2분 정도 소요됩니다."):
-                sum_result, bookreport_result = langchain(text=content, interesting=interesting, impression=impression)
+                sum_result, bookreport_result = langchain_model(text=content, interesting=interesting, impression=impression)
                 with col1:
                     st.markdown('<div class="column">', unsafe_allow_html=True)
                     st.markdown('<p class="small-font">독후감 자동생성</p>', unsafe_allow_html=True)
