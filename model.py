@@ -166,4 +166,4 @@ def langchain_model(text="책원문", interesting="재미있던 부분", impress
 
 if __name__ == '__main__':
     # test code
-    sum_result, bookreport_result = langchain(text="인어공주는", interesting="인어 공주가 승천하는 부분", impression="착하게 살아야 한다.")
+    sum_result, bookreport_result = langchain_model(text="인어공주는", interesting="인어 공주가 승천하는 부분", impression="착하게 살아야 한다.")
