@@ -38,7 +38,7 @@ def langchain_model(text="책 줄거리 랜덤 생성", interesting="재미있�
     '''
 
     split_docs = tokenizer(text)
-    llm = ChatOpenAI(streamlit.secrets["OPENAI_API_KEY"],
+    llm = ChatOpenAI(api_key=streamlit.secrets["OPENAI_API_KEY"],
                     temperature=0,
                     model_name='gpt-3.5-turbo-0125')
 
